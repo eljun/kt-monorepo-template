@@ -1,8 +1,8 @@
 {
-  "name": "kt-monorepo-template",
+  "name": "{{PROJECT_SLUG}}",
   "version": "0.1.0",
   "private": true,
-  "description": "Template boilerplate for kt-monorepo projects (Next.js 16 + Sanity v5 + Tailwind 4 + shadcn/ui)",
+  "description": "{{PROJECT_DESCRIPTION}}",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

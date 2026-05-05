@@ -54,3 +54,15 @@ npm run lint        # ESLint
 npm run build       # Next.js production build
 npm run typegen     # Regenerate Sanity types after schema changes
 ```
+
+## Templating
+
+This is the canonical boilerplate cloned by the [`bootstrap-project`](https://github.com/eljun/kt-skills) skill. The skill substitutes the following placeholders during scaffolding (single grep+replace pass for `{{PROJECT_*}}`):
+
+| Placeholder | Replaced with | Found in |
+|---|---|---|
+| `{{PROJECT_NAME}}` | display name | `CLAUDE.md`, `app/layout.tsx`, `app/(site)/page.tsx`, `app/(site)/[slug]/page.tsx`, `components/Header.tsx`, `components/Footer.tsx`, `sanity/sanity.config.ts`, this `README.md` |
+| `{{PROJECT_SLUG}}` | kebab-case slug | `package.json` name |
+| `{{PROJECT_DESCRIPTION}}` | one-line description | `CLAUDE.md`, `package.json` description, `app/layout.tsx` metadata |
+
+> **Working on the template itself?** `package.json` ships with `{{PROJECT_SLUG}}` / `{{PROJECT_DESCRIPTION}}` placeholders, so `npm install` will fail with an "invalid name" error if you run it directly on the template. Substitute the placeholders to test values first, or test in a copy outside this repo.
